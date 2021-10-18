@@ -1,0 +1,62 @@
+<div>
+    <p-panel header="CONSULTA DAS LISTAS DE ESPERA NO SUS">
+        <div class="p-field">
+            <p>Encontre-se na lista de espera, lista de agendados e atendidos</p>
+
+            <span class="p-input-icon-left" style="margin-right: 10px;">
+                <i class="pi pi-search"></i>
+                <input type="text" pInputText [(ngModel)]="texto" placeholder="Search" maxlength="15" [size]=30>
+            </span>
+            <button pButton pRipple type="button" label="Pesquisar" class="mr-1 colorPrimary"></button>
+        </div>
+        <div class="mt-3">
+            <p-captcha siteKey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI" (onResponse)="showResponse($event)"
+                initCallback="loadCaptcha"></p-captcha>
+        </div>
+    </p-panel>
+</div>
+<div style=" margin-top: 15px">
+    <p-panel header="Informações gerais">
+        <p>
+            Lorem ipsum placerat congue ligula nullam nam pharetra, fermentum ullamcorper lectus feugiat litora taciti
+            elit,
+            convallis at inceptos elit non duis. pharetra odio orci magna sit praesent ut varius at duis inceptos, dui
+            tellus suscipit erat porta gravida integer faucibus interdum donec elementum, ut euismod sit quisque litora
+            pretium orci sociosqu dolor. pretium enim arcu vivamus dui leo primis sapien ligula ipsum primis blandit
+            fusce,
+            primis lorem pretium felis risus conubia mi aenean dictumst ligula libero. taciti imperdiet quis volutpat
+            nulla
+            fusce dui risus sit erat ante, lacinia est elementum convallis blandit mi purus lobortis feugiat, morbi
+            libero
+            mollis vitae tempor arcu feugiat conubia ipsum.
+        </p>
+        <p>
+            Sagittis praesent phasellus est commodo taciti commodo posuere, ut elementum leo varius imperdiet tortor
+            eget
+            cubilia, sapien donec ut aliquam tempor ultrices. senectus risus fringilla auctor rutrum sollicitudin felis
+            malesuada sapien, tempus neque odio ad leo lorem porttitor duis diam, dictumst rhoncus viverra neque platea
+            donec
+            porttitor. porta semper quis euismod faucibus risus metus nam aliquam, consequat suspendisse ipsum odio in
+            habitasse
+            augue tellus, accumsan per habitasse inceptos enim suscipit mi. vehicula non curabitur consectetur non
+            dapibus
+            venenatis, vulputate conubia vel luctus phasellus, primis duis taciti lectus etiam. aliquet donec imperdiet
+            tempus
+            consectetur, lectus egestas.
+        </p>
+
+        <div style=" display: flex; flex-direction: row; justify-content: center;">
+            <button style="width: 250px; height: 100px;" pButton pRipple type="button" label="Primary"
+                class="mr-1 colorPrimary"></button>
+            <button style="width: 250px; height: 100px;" pButton pRipple type="button" label="Primary"
+                class="colorPrimary"></button>
+        </div>
+        <div style=" display: flex; flex-direction: row; justify-content: center;" class="mt-1">
+            <button style="width: 250px; height: 100px;" pButton pRipple type="button" label="Primary"
+                class="mr-1 colorPrimary"></button>
+            <button style="width: 250px; height: 100px;" pButton pRipple type="button" label="Primary"
+                class="colorPrimary"></button>
+        </div>
+
+    </p-panel>
+</div>

@@ -1,4 +1,10 @@
-<p-menubar [model]="items">
-    <input type="text" pInputText placeholder="Search">
-    <button pButton label="Login" icon="pi pi-sign-in" style="margin-left: 5px;"  class="colorPrimary" routerLink="home"></button>
+<p-menubar [model]="items" [style]="{'background': 'transparent', 'border-color': 'transparent'}">
+    <ng-template pTemplate="start">
+        <img src="https://www.logomaker.com/api/main/images/1j+ojVVCOMkX9Wyrexe4hGfN27XE+QETmhPbi2c...ZzhM9wlqlSEog+Quq6R6b0gN4FcIhxIPcs48gDIqD99LxUc6unyAOA=="
+            height="70" class="p-p-4">
+    </ng-template>
+    <ng-template pTemplate="end">
+        <button pButton label="Login" icon="pi pi-sign-in" style="margin-left: 5px;" class="colorPrimary"
+            routerLink="home"></button>
+    </ng-template>
 </p-menubar>

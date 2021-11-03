@@ -1,25 +1,62 @@
 <p-toast></p-toast>
-<p-panel header="Cadastro de usuário">
+<div>
+  <p-panel header="Cadastro de usuário">
     <div class="p-fluid p-formgrid p-grid">
-
-        <div class="p-field p-col">
-            <div class="p-field p-col-12 p-md-4" style="padding-top: 10px">
-                <span class="p-float-label">
-                    <input type="text" id="inputtext" pInputText name="nome" [(ngModel)]="usuario.nome">
-                    <label for="inputtext">Usuário</label>
-                </span>
-            </div>
+      <div class="p-field p-col">
+        <div class="p-field p-col-12 p-md-4" style="padding-top: 10px">
+          <span class="p-float-label">
+            <input
+              type="text"
+              id="inputtext"
+              pInputText
+              name="nome"
+              [(ngModel)]="usuario.nome"
+            />
+            <label for="inputtext">Usuário</label>
+          </span>
         </div>
-        <div class="p-field p-col">
-            <div class="p-field p-col-12 p-md-4" style="padding-top: 2%">
-                <span class="p-float-label">
-                    <input type="email" id="inputtext" pInputText name="email" [(ngModel)]="usuario.email">
-                    <label for="inputtext">E-mail</label>
-                </span>
-            </div>
+      </div>
+      <div class="p-field p-col">
+        <div class="p-field p-col-12 p-md-4" style="padding-top: 2%">
+          <span class="p-float-label">
+            <input
+              type="email"
+              id="inputtext"
+              pInputText
+              name="email"
+              [(ngModel)]="usuario.email"
+            />
+            <label for="inputtext">E-mail</label>
+          </span>
         </div>
+      </div>
+    </div>
+    <div style="padding-top: 15px">
+      <p-autoComplete
+        [(ngModel)]="text"
+        [suggestions]="results"
+        [dropdown]="true"
+        (change)="search()"
+        (onDropdownClick)="totalResults()"
+        placeholder="Selecione"
+      ></p-autoComplete>
     </div>
     <div style="padding-top: 1.4em">
-        <p-button label="Salvar" icon="pi pi-save" iconPos="left" (click)="salvar()"></p-button>
+      <p-button
+        label="Salvar"
+        icon="pi pi-save"
+        iconPos="left"
+        (click)="salvar()"
+      ></p-button>
     </div>
-</p-panel>
+  </p-panel>
+</div>
+<ng-template ngIf="!prod">
+  <div style="padding-top: 1.4em">
+    <p-card>
+      <p-header> <h2>Dados para desenvolvedor</h2> </p-header>
+      {{ text | json }} <br />
+      {{ results | json }} <br />
+    </p-card>
+  </div>
+</ng-template>

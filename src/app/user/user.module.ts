@@ -9,8 +9,7 @@ import { MessageModule } from 'primeng/message';
 import { InputTextModule } from 'primeng/inputtext';
 import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
-
-
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 @NgModule({
   declarations: [UserComponent],
@@ -23,7 +22,8 @@ import { PanelModule } from 'primeng/panel';
     MessageModule,
     InputTextModule,
     ButtonModule,
-    PanelModule
-  ]
+    PanelModule,
+    ConfirmDialogModule,
+  ],
 })
-export class UserModule { }
+export class UserModule {}

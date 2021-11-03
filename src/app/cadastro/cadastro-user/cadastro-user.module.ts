@@ -9,7 +9,8 @@ import { ButtonModule } from 'primeng/button';
 import { PanelModule } from 'primeng/panel';
 import { ToastModule } from 'primeng/toast';
 import { MessageService } from 'primeng/api';
-
+import { AutoCompleteModule } from 'primeng/autocomplete';
+import { CardModule } from 'primeng/card';
 @NgModule({
   declarations: [CadastroUserComponent],
   imports: [
@@ -20,8 +21,10 @@ import { MessageService } from 'primeng/api';
     InputTextModule,
     ButtonModule,
     PanelModule,
-    ToastModule
+    ToastModule,
+    AutoCompleteModule,
+    CardModule,
   ],
-  providers: [MessageService]
+  providers: [MessageService],
 })
-export class CadastroUserModule { }
+export class CadastroUserModule {}
